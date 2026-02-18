@@ -6,7 +6,9 @@
 **Intended Recipient:** University of Kentucky  
 
 ---
+This document is included in the root of the repository to ensure transparent documentation of authorship, independent origin, and voluntary transfer intent.
 
+---
 ## 1. Independent Creation
 
 This project was independently conceived, architected, and implemented by Sierra Warren using personal time, personal funding, and personal devices.
