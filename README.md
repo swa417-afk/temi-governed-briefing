@@ -15,8 +15,16 @@ This project was independently conceived, architected, and implemented for acade
 
 ## Repository Contents
 
+### Documentation
 - **LICENSE** - Apache License 2.0 governing the use and distribution of this work
 - **VOLUNTARY_RESTRICTED_IP_ASSIGNMENT_INTENT.md** - Legal document outlining the voluntary intellectual property assignment to the University of Kentucky with authorship protections
+- **docs/INTEGRATION_HAVOC.md** - Integration guide for HAVOC clinical extensions
+
+### Source Code
+- **havoc-clinical-extensions/android/** - Android library module for Temi robot clinical extensions
+  - Gradle build configuration (Kotlin DSL)
+  - Clinical module with Android manifest and source code
+  - Package: `edu.uky.havoc.clinical`
 
 ## Legal Status
 
@@ -37,6 +45,16 @@ As outlined in the IP assignment document, authorship remains permanently attrib
 Copyright 2026 Sierra Warren
 
 Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) file for details.
+
+## Getting Started
+
+### Prerequisites
+- Android SDK 24 or higher
+- Kotlin 1.9.20 or higher
+- Gradle 8.2.0 or higher
+
+### Integration
+See [docs/INTEGRATION_HAVOC.md](docs/INTEGRATION_HAVOC.md) for detailed integration instructions.
 
 ## Contact
 
