@@ -1,0 +1,50 @@
+events:
+  ALERT_HAZARD:
+    priority: 100
+    threshold: 0.85
+    suppresses: ["ALL"]
+    temporal_frames: 2
+  ALERT_CLINICAL_FALL:
+    priority: 90
+    threshold: 0.90
+    suppresses: ["NAVIGATE_TO_PERSON", "OFFER_ASSISTANCE", "GREET_USER"]
+    temporal_frames: 3
+    constraints:
+      requires: ["posture_classification", "frame_sequence"]
+      interrupt: true
+  FLAG_SECURITY_CONCERN:
+    priority: 80
+    threshold: 0.75
+    suppresses: ["NAVIGATE_TO_PERSON", "OFFER_ASSISTANCE", "GREET_USER", "INITIATE_BRIEFING"]
+    temporal_frames: 2
+    constraints:
+      no_movement: true
+      no_identity_resolution: true
+  NAVIGATE_TO_PERSON:
+    priority: 50
+    threshold: 0.85
+    suppresses: ["GREET_USER"]
+    constraints:
+      requires: ["identity_verified", "explicit_command"]
+  OFFER_ASSISTANCE:
+    priority: 40
+    threshold: 0.65
+    suppresses: ["GREET_USER"]
+    temporal_frames: 2
+    constraints:
+      requires_confirmation: true
+      cooldown: true
+  MONITORING_EVENT:
+    priority: 30
+    threshold: 0.70
+    suppresses: []
+  GREET_USER:
+    priority: 10
+    threshold: 0.60
+    suppresses: []
+    constraints:
+      cooldown: true
+  NO_ACTION:
+    priority: 0
+    threshold: 0.0
+    suppresses: []

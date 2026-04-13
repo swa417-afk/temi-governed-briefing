@@ -54,3 +54,13 @@ See: `docs/INTEGRATION_HAVOC.md`
 See:
 - `LICENSE`
 - `VOLUNTARY_PERPETUAL_INSTITUTIONAL_LICENSE_INTENT.md`
+
+## Governed Autonomy Pipeline (Python)
+
+A ROS2-friendly, standalone governed pipeline is included under `temi_autonomy/`.
+
+Processing flow:
+
+`Sensor Input -> ai_processor -> temporal_buffer -> event_bus -> event_executor -> event_publisher`
+
+Runtime policy is configured in `config/event_config.yaml`.
